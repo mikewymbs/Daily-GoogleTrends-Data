@@ -57,7 +57,7 @@ def requestDailydatafromGT(keywords, geography, date):  #parameters must be stri
     else:
         requestdate=str(date)+' 3m'
     trend_payload = {'q': keywords,'hl': 'en-US','geo': geography, 'date': requestdate} #define parameters of the request
-    pytrend = TrendReq(google_username, google_password, custom_useragent=randomName(randint(5,10)) #connect to Google
+    pytrend = TrendReq(google_username, google_password, custom_useragent=randomName(randint(5,10))) #connect to Google
     
     while mes==0:
         try:           
@@ -68,7 +68,7 @@ def requestDailydatafromGT(keywords, geography, date):  #parameters must be stri
             renew_tor()
             connectTor()
             showmyip() #optional
-            pytrend = TrendReq(google_username, google_password, custom_useragent=randomName(randint(5,10)) #connect to Google
+            pytrend = TrendReq(google_username, google_password, custom_useragent=randomName(randint(5,10))) #connect to Google
             mes=0
         
     return results
